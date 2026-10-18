@@ -1,0 +1,91 @@
+Name: Tyler Hawkins
+FSUID: JTH24E
+Git Lab Tutorials completion date: October 16, 2026
+GitHub account creation date: Approximately January 2025
+
+1. Paste the console output from the push in step 3.C.
+
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (7/7), 667 bytes | 667.00 KiB/s, done.
+Total 7 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To github.com:tysmooove/assignment2.git
+   f4975e5..cc8bfe7  master -> master
+
+2. How many commits have been made to the repository by anyone?
+Write the command used.
+
+There were 9 commits when I checked, before committing the
+completed answers file. This count includes all authors.
+
+Command:
+git rev-list --all --count
+
+3. When was README.md last modified? Write the command used.
+
+The most recent committed change to README.md was on
+October 17, 2026, at 8:27:13 PM EDT (UTC-04:00).
+
+Commit: 973b894
+Commit message: Add credentials
+
+Command:
+git log -1 --format="%h %aI %s" -- README.md
+
+4. Mention two reasons why branches are used in a Git repository.
+
+Branches let developers work on separate features or fixes without
+immediately changing the main branch. They also let developers test
+and review changes before merging them into the main branch.
+
+5. What is the difference between git log and git status?
+
+git log displays committed history, including commit messages,
+authors, and dates. git status shows the current working tree and
+staging area, including modified, staged, and untracked files.
+
+6. What command shows commits where Vehicle.h was one of the
+committed files?
+
+git log --follow -- Vehicle.h
+
+This shows the file's commit history and follows it across renames.
+
+7. What command shows commits whose messages contain "file"?
+
+git log --grep="file"
+
+8. In object-oriented programming, what are inheritance,
+polymorphism, and encapsulation?
+
+I. Inheritance allows a derived class to build on a base class,
+reusing accessible data and behavior.
+
+II. Polymorphism allows the same interface to produce different
+behavior depending on the object's type. For example, derived
+classes can provide different implementations of a virtual method.
+
+III. Encapsulation groups data and methods inside a class and
+controls access to the object's internal state through an interface.
+
+9. What is the main difference between the Dictator and Lieutenants
+workflow and the Integration Manager workflow?
+
+The Integration Manager workflow places integration and conflict
+resolution under one manager. The Dictator and Lieutenants workflow
+adds another layer: lieutenants integrate changes for groups of
+developers and resolve conflicts. The dictator then integrates the
+lieutenants' changes and is the only person who pushes to the
+central, or blessed, repository.
+
+10. How would a team of 100 developers benefit from the Dictator
+and Lieutenants workflow instead of the Centralized workflow?
+
+Lieutenants can review changes and resolve conflicts for smaller
+groups in parallel. This distributes the integration workload and
+reduces the coordination required among developers pushing to one
+shared repository. The dictator can focus on combining the
+lieutenants' reviewed changes into the official project.
